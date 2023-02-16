@@ -9,20 +9,10 @@ import { Component } from '@angular/core';
   export class AppComponent {
     title = "Sam";
 
-  // intervalSub: any;
-
-  // ngOnInit(): void 
-  // {
-  //   this.intervalSub = setInterval(() => {
-  //     console.log("Checking onInit");
-  //   }, 1000);
-  // }
-  
-  // ngOnDestroy():void
-  // {
-  //   if(this.intervalSub)
-  //   {
-  //     clearInterval(this.intervalSub);
-  //   }
-  // }
+    getMin(a: number,b: number): number
+    {
+      if(a < b)
+        return a;
+      return b;
+    }
 }
