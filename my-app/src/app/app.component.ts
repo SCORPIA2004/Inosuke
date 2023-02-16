@@ -7,12 +7,10 @@ import { Component } from '@angular/core';
 })
 
   export class AppComponent {
-    title = "Sam";
+    showText = false;
 
-    getMin(a: number,b: number): number
+    toggleText(): void
     {
-      if(a < b)
-        return a;
-      return b;
+      this.showText = !this.showText;
     }
 }
