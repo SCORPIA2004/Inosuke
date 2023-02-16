@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 
   export class AppComponent {
-    showText = false;
+    // showText = false;
 
-    toggleText(): void
-    {
-      this.showText = !this.showText;
-    }
+    // toggleText(): void
+    // {
+    //   this.showText = !this.showText;
+    // }
 }
