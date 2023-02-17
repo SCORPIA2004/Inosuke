@@ -1,1 +1,4 @@
-<app-item-details (deleteRequest)="deleteItem($event)"></app-item-details>
+<!-- <app-app-sizer [(size)]="fontSizePx"></app-app-sizer> -->
+<app-app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx"></app-app-sizer>
+
+<div [style.font-size.px] = "fontSizePx">Resizable text</div>

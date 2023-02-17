@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { AppSizerComponent } from './app-sizer/app-sizer.component';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
   styleUrls: ['./app.component.scss']
 })
 
-  export class AppComponent {
-    deleteItem(item: string)
-    {
-      console.log(item);
-    }
+export class AppComponent 
+{
+    fontSizePx = 16;
 }

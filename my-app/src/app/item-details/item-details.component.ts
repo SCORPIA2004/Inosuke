@@ -17,4 +17,4 @@ export class ItemDetailsComponent implements OnInit{
   {
     this.deleteRequest.emit("Item name deleted")
   }
-}
+} 

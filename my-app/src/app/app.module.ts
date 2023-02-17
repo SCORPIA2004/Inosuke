@@ -8,6 +8,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { GreetingsPipePipe } from './greetings-pipe.pipe';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { AppSizerComponent } from './app-sizer/app-sizer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     ParentComponent,
     ChildComponent,
     GreetingsPipePipe,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    AppSizerComponent
   ],
   imports: [
     BrowserModule,
