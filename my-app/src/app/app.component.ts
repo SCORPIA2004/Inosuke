@@ -10,5 +10,8 @@ import { AppSizerComponent } from './app-sizer/app-sizer.component';
 
 export class AppComponent 
 {
-    fontSizePx = 16;
+  callPhone(phone:string)
+  {
+    console.log(phone);
+  }
 }

@@ -1,4 +1,5 @@
-<!-- <app-app-sizer [(size)]="fontSizePx"></app-app-sizer> -->
-<app-app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx"></app-app-sizer>
+<!-- #phone is the template variable name of the input field. Thus we can refer to it using this throughout thte template -->
+<input #phone placeholder="enter phone"/>
 
-<div [style.font-size.px] = "fontSizePx">Resizable text</div>
+<!-- here we use phone.value to get the value entered in the input field and pass it into the callPhone() method  -->
+<button (click)="callPhone(phone.value)">Call</button>
