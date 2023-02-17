@@ -1,5 +1,5 @@
-<!-- #phone is the template variable name of the input field. Thus we can refer to it using this throughout thte template -->
-<input #phone placeholder="enter phone"/>
+<input #ref1 type="text" [(ngModel)]="firstExample" />
 
-<!-- here we use phone.value to get the value entered in the input field and pass it into the callPhone() method  -->
-<button (click)="callPhone(phone.value)">Call</button>
+<ng-template [ngIf]="true">
+    <span>{{ref1.value}}</span>    
+</ng-template>
