@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent  implements OnInit
 {
   currentClasses={};
+  currentStyles={};
 
   ngOnInit()
   {
     this.setCurrentClasses();
+    this.setCurrentStyles();
   }
 
   setCurrentClasses()
@@ -21,6 +24,13 @@ export class AppComponent  implements OnInit
     saveable: true,
     modified: false,
     special: true
+    }
+  }
+  setCurrentStyles()
+  {
+    this.currentStyles = {
+      'font-style': 'italic',
+      'font-weight': 'bold'
     }
   }
 }
