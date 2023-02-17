@@ -26,6 +26,10 @@ export class AppSizerComponent implements OnInit, OnDestroy {
   {
     this.resize(+1);
   }
+  reset()
+  {
+    this.size = 16;
+  }
 
   resize(change: number)
   {
