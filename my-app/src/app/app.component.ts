@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,8 @@ import { Component } from '@angular/core';
 })
 
   export class AppComponent {
-    // showText = false;
-
-    // toggleText(): void
-    // {
-    //   this.showText = !this.showText;
-    // }
+    deleteItem(item: string)
+    {
+      console.log(item);
+    }
 }
