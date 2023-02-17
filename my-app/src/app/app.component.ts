@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 
-export class AppComponent 
+export class AppComponent  implements OnInit
 {
-  firstExample:any;
+  currentClasses={};
+
+  ngOnInit()
+  {
+    this.setCurrentClasses();
+  }
+
+  setCurrentClasses()
+  {
+    this.currentClasses = {
+    saveable: true,
+    modified: false,
+    special: true
+    }
+  }
 }
