@@ -1,6 +1,6 @@
 import { style } from '@angular/animations';
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -11,17 +11,26 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class AppComponent  implements OnInit
 {
 
-  profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl('')
-  });
-
+  nameInput = '';
   ngOnInit(): void 
   {
   }  
 
+  validationForm = new FormGroup({
+    name: new FormControl(this.nameInput, [
+      Validators.required,
+      Validators.minLength(4)
+    ])
+  })
+
+  get name()
+  {
+    return this.validationForm.get('name');
+  }
+
   onSubmit()
   {
-    console.warn(this.profileForm.value);
+    console.log(this.nameInput);
   }
+
 }
