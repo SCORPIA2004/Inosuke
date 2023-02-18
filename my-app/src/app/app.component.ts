@@ -1,5 +1,6 @@
 import { style } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { LogService } from './log.service';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +10,17 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppComponent  implements OnInit
 {
-  isActive = true;
-  ngOnInit()
+  constructor(private logService:LogService,
+    private renderer:Renderer2,
+    private host:ElementRef
+    )
   {
-  }
-  items = [
-    { name:"Sam" },
-    { name:"Cortez" },
-    { name:"Jack" }
-  ]
 
-  people = { name:"Shayan" }
+  }
+
+  ngOnInit(): void 
+  {
+    this.logService.logMessage("Aol");  
+    this.renderer.setStyle(this.host.nativeElement, "color", "red");  
+  }  
 }
