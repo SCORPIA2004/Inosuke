@@ -13,6 +13,8 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { AppSizerComponent } from './app-sizer/app-sizer.component';
 import { HighlightDirective } from './highlight.directive';
 import { LogService } from './log.service';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { LogService } from './log.service';
     GreetingsPipePipe,
     ItemDetailsComponent,
     AppSizerComponent,
-    HighlightDirective
+    HighlightDirective,
+    FirstComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,
