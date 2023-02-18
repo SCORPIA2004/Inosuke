@@ -14,7 +14,7 @@ export class FirstComponent implements OnInit {
 
   ngOnInit(): void
   {
-    alert(this.route.snapshot.paramMap.get('id'))
+    // alert(this.route.snapshot.paramMap.get('id'))
   }
 
 }

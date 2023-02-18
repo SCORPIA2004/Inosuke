@@ -15,6 +15,9 @@ import { HighlightDirective } from './highlight.directive';
 import { LogService } from './log.service';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ChildAComponent } from './child-a/child-a.component';
+import { ChildBComponent } from './child-b/child-b.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { SecondComponent } from './second/second.component';
     AppSizerComponent,
     HighlightDirective,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    NotFoundComponent,
+    ChildAComponent,
+    ChildBComponent
   ],
   imports: [
     BrowserModule,
