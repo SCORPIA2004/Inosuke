@@ -9,28 +9,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppComponent  implements OnInit
 {
-  currentClasses={};
-  currentStyles={};
-
+  isActive = true;
   ngOnInit()
   {
-    this.setCurrentClasses();
-    this.setCurrentStyles();
   }
+  items = [
+    { name:"Sam" },
+    { name:"Cortez" },
+    { name:"Jack" }
+  ]
 
-  setCurrentClasses()
-  {
-    this.currentClasses = {
-    saveable: true,
-    modified: false,
-    special: true
-    }
-  }
-  setCurrentStyles()
-  {
-    this.currentStyles = {
-      'font-style': 'italic',
-      'font-weight': 'bold'
-    }
-  }
+  people = { name:"Shayan" }
 }
