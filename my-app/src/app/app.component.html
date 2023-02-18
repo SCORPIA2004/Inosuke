@@ -1,16 +1,38 @@
-<h2>Routing</h2>
+<h1>Pet form</h1>
+<div [hidden] = "submitted">
+    <form #petForm = "ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for = "name">Name: </label>
+            <input 
+            id="name"
+            type = "text"
+            required
+            placeholder="Enter name of pet"
+            [(ngModel)] = "model.name"
+            name = "name"
+            />
+        </div>
+        <div>
+            <label for = "species">Species: </label>
+            <select 
+            id="species"
+            required
+            [(ngModel)] = "model.specie"
+            name = "specie"
+            >
+                <option *ngFor="let specie of species" [value]="specie">{{ specie }}</option>
+            </select>
+        </div>
 
-<nav>
-    <ul>
-        <li>
-            <a routerLink="/">Home</a>
-        </li>
-        <li>
-            <a routerLink="/first-component/:id">First</a>
-        </li>
-        <li>
-            <a routerLink="/second-component">Second</a>
-        </li>
-    </ul>
-</nav>
-<router-outlet></router-outlet>
+        <button [disabled]="!petForm.form.valid" type="submit">Submit</button>
+    </form>
+</div>
+
+
+<div [hidden]="!submitted">
+    Thank you for your submission!
+    <h4>Here's what we got:</h4>
+    <p>Name: {{model.name}}</p>
+    <p>Species: {{model.specie}}</p>
+    <button (click)="submitted = false">Edit</button>
+</div>

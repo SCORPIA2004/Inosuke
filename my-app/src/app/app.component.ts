@@ -1,6 +1,7 @@
 import { style } from '@angular/animations';
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { LogService } from './log.service';
+import { Pet } from './pet.model';
 
 @Component({
   selector: 'app-root',
@@ -10,17 +11,17 @@ import { LogService } from './log.service';
 
 export class AppComponent  implements OnInit
 {
-  constructor(private logService:LogService,
-    private renderer:Renderer2,
-    private host:ElementRef
-    )
-  {
 
+  species=["fish", "dog", "cat"];
+  model = new Pet(1, "Sam", this.species[0]);
+  submitted = false;
+
+  onSubmit():void
+  {
+    this.submitted = true;
   }
 
   ngOnInit(): void 
   {
-    this.logService.logMessage("Aol");  
-    this.renderer.setStyle(this.host.nativeElement, "color", "red");  
   }  
 }
