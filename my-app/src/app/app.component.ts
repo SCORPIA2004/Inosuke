@@ -1,7 +1,6 @@
 import { style } from '@angular/animations';
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
-import { LogService } from './log.service';
-import { Pet } from './pet.model';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,16 +11,17 @@ import { Pet } from './pet.model';
 export class AppComponent  implements OnInit
 {
 
-  species=["fish", "dog", "cat"];
-  model = new Pet(1, "Sam", this.species[0]);
-  submitted = false;
-
-  onSubmit():void
-  {
-    this.submitted = true;
-  }
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl('')
+  });
 
   ngOnInit(): void 
   {
   }  
+
+  onSubmit()
+  {
+    console.warn(this.profileForm.value);
+  }
 }
